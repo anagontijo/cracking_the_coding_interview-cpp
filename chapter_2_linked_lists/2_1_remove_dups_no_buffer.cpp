@@ -19,15 +19,7 @@ Because If the current node had the same value as any before of it, than it woul
 
 using namespace std;
 
-int main(){
-  linked_list ll;
-  vector<node> n(7);
-  for(int i = 0; i < 7; i++){
-    n[i] = i%4;
-    ll.add_node(&n[i]);
-  }
-  
-  // General part of the code
+void remove_dups_no_buffer(){
   node* now = ll.base->next;
   node* aux;
   while(now != ll.base){
