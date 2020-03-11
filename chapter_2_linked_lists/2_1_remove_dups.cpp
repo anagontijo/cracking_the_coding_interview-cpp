@@ -12,16 +12,7 @@ in the counter. If the counter is greater than 1 for said value, the node is rem
 
 using namespace std;
 
-int main(){
-  linked_list ll;
-  vector<node> n(7);
-  map<int,int> count;
-  for(int i = 0; i < 7; i++){
-    n[i] = i%4;
-    ll.add_node(&n[i]);
-  }
-  
-  //General code begins here
+void remove_dups(linked_list ll){
   node* now = ll.base->next;
   while(now != ll.base){
     count[now->value] += 1;
